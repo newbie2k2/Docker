@@ -84,3 +84,23 @@ Advanced Package Tool là một công cụ quản lý gói (package management t
 + rm [file_name]: Xoá tập tin hoặc thư mục
 + rm -r [directory_name]: xóa thư mục và nội dung của nó:
 ```
+
+### 2.6: Manipulating Files and Directories (Thao tác tập tin và thư mục)
+Di chuyển File System
+```
++ mkdir: Making Directory - Tạo thư mục
+
++ mv [source] [destination]: Di chuyển hoặc đổi tên một tập tin hoặc thư mục
+=> mv old_file.txt new_file.txt: đổi tên thư mục
+=> mv file.txt /path/to/directory: di chuyển một tập tin vào một thư mục
+
++ cp [source] [destination]: Sao chép một tập tin hoặc thư mục
+=> cp file.txt file_copy.txt: Sao chép tập tin
+=> cp file.txt /path/to/directory: Sao chép một tập tin vào một thư mục
+
++ rm [file_name]: xoá tập tin hoặc thư mục
++ rm -r directory_name: xóa một thư mục và nội dung của nó
+
++ touch {file path/file name.x}: Tạo 1 file mới, hoặc nhiều file
+=> touch colen.txt colen1.txt
+```
