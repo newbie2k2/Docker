@@ -104,3 +104,26 @@ Di chuyển File System
 + touch {file path/file name.x}: Tạo 1 file mới, hoặc nhiều file
 => touch colen.txt colen1.txt
 ```
+
+### 2.7: Edit and View file (Chỉnh sửa và hiển thị file)
+```
++ nano {filename.x}: View và Edit nội dung của file
++ cat {filename.x}: Xem nội dung file (toàn bộ content)
++ more {filename.x}: Xem content theo từng page (press space để load thêm, q to quit)
++ less {filename.x} (install using apt): xem content theo từng page (press up/down để load thêm, press q to quit)
++ head -n {number line} {path}: View từ số dòng đầu tiên của file
++ tail -n {number line} {path}: View từ số dòng đầu tiên của file
+```
+
+Chỉnh sửa tập tin
+```
++ nano [file_name]: Sử dụng trình soạn thảo văn bản nano
++ vi [file_name]: Sử dụng trình soạn thảo văn bản vi hoặc vim
++ vim [file_name]: Sử dụng trình soạn thảo văn bản vi hoặc vim
+vi và vim là hai trình soạn thảo văn bản mạnh mẽ nhưng phức tạp hơn nano. Để sử dụng, bạn cần biết một số lệnh và phím tắt cơ bản. 
+Để lưu và thoát, bạn thường sử dụng Esc rồi :wq cho vi hoặc vim
+
++ emacs [file_name]: Sử dụng trình soạn thảo văn bản emacs
+emacs là một trình soạn thảo văn bản mạnh mẽ với nhiều tính năng phức tạp. Nó có một hệ thống phím tắt riêng, nhưng cũng cung cấp một giao diện người dùng đồ họa nếu bạn cài đặt.
+
+```
