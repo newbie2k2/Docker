@@ -156,7 +156,16 @@ emacs là một trình soạn thảo văn bản mạnh mẽ với nhiều tính 
 => grep "example" là lệnh để tìm kiếm chuỗi "example" trong đầu vào được cung cấp cho nó.
 => Kết quả của lệnh "ls" sẽ chuyển đến lệnh 'grep', và 'grep' sẽ hiện thị ca dòng có chứa từ khoá "example". Điều này giúp bạn tìm kiếm các tệp tin có tên chứa từ khoá "hello-docker" trong thư mục hiện tại
 
+```
 
+### Bài 2.9: Searching (Tìm kiếm)
+```
++ grep: là một công cụ tìm kiếm mạnh mẽ để tìm kiếm các dòng trong tệp tin hoặc đầu vào chuẩn (stdin) mà khớp với một biểu thức chính quy (regular expression)
+=> grep hello hello-docker.txt
+=> grep -i hello hello-docker.txt: (-i) không phân biệt chữ hoa thường
+=> grep -i hello hello-docker*
+=> grep -i root /etc/passwd
+=> grep -i -r hello .: (.) thư mục hiện tại
 ```
 
 
