@@ -168,6 +168,17 @@ emacs là một trình soạn thảo văn bản mạnh mẽ với nhiều tính 
 => grep -i -r hello .: (.) thư mục hiện tại
 ```
 
+### Bài 2.10: Finding 
+
+```
++ find: được sử dụng để tìm kiếm tệp tin và thư mục dựa trên nhiều tiêu chí khác nhau như tên, kích thước, quyền truy cập, v.v.
+=> find /etc/ -type d: tìm thư mục trong thư mục /etc/
+=> find /etc/ -type f: tìm file trong thư mục /etc/
+=> find / -type f -name "f*": Tìm tất cả các file có tên bắt đầu bằng chữ "f" ở trong thư mục / (root)
+=> find / -type f -i -name "f*": Không phân biệt chữ hoa, chữ thường
+=> .....
+```
+
 
 
 
