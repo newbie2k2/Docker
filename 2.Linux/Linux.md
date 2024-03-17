@@ -127,3 +127,38 @@ vi và vim là hai trình soạn thảo văn bản mạnh mẽ nhưng phức t�
 emacs là một trình soạn thảo văn bản mạnh mẽ với nhiều tính năng phức tạp. Nó có một hệ thống phím tắt riêng, nhưng cũng cung cấp một giao diện người dùng đồ họa nếu bạn cài đặt.
 
 ```
+
+### Bài 2.8: Redirection (Chuyển hướng)
+```
++ command > file.txt : ( > ) Ghi đè (overwrite) nội dung ra tập tin.
+=> cat hello-docker > file-docker.txt : Chuyển nội dung của file hello-docker sang file-docker.txt
+=> echo Hello Docker > file-docker.txt
+
++ command >> file.txt : Ghi thêm nội dung vào cuối file mà không làm mất nội dung của file
+
++ command 2> error.txt
+=> command: Đây là lệnh bạn muốn thực thi
+=> 2>: Đây là phần của lệnh redirection, chuyển hướng đầu ra lỗi chuẩn (stderr).
+=> error.txt: Đây là tên của tập tin mà đầu ra lỗi chuẩn sẽ được ghi vào
+=>  Lệnh này sẽ chạy "command" và chuyển hướng bất kỳ lỗi nào xuất hiện trong quá trình thực thi của nó vào tập tin "error.txt"
+
++ command &> output.txt
+=> command: đây là lệnh bạn muốn thực thi
+=> &>: Đây là phần lệnh redirection chuyển hướng cả đầu ra chuẩn (stdout) và lỗi chuẩn (stderr)
+=> output.txt: Đây là tập tin mà đầu ra chuẩn và lỗi chuẩn sẽ được ghi vào
+=> Lệnh này sẽ chạy command và chuyển hướng cả đầu ra chuẩn và đầu ra lỗi chuẩn vào tập tin output.txt. Điều này có nghĩa là cả kết quả đúng và lỗi sẽ được ghi vào cùng một tập tin
+
++ command < input.txt: Lệnh này sử dụng nội dung của tập tin input.txt làm đầu vào cho command
+
++ command1 | command2: Pipes (|) cho phép bạn kết hợp đầu ra của một lệnh với đầu vào của một lệnh khác. Điều này hữu ích khi bạn muốn chuyển dữ liệu trực tiếp từ một lệnh sang lệnh khác
+=> ls | grep "hello-docker"
+=> ls là lệnh để liệt kê các tệp tin trong thư mục hiện tại.
+=> grep "example" là lệnh để tìm kiếm chuỗi "example" trong đầu vào được cung cấp cho nó.
+=> Kết quả của lệnh "ls" sẽ chuyển đến lệnh 'grep', và 'grep' sẽ hiện thị ca dòng có chứa từ khoá "example". Điều này giúp bạn tìm kiếm các tệp tin có tên chứa từ khoá "hello-docker" trong thư mục hiện tại
+
+
+```
+
+
+
+
