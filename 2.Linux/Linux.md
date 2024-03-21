@@ -204,5 +204,24 @@ Toán tử `>` được sử dụng để chuyển hướng đầu ra của mộ
 ```
 
 
+### Bài 2.12: Environment variables
+
+```
++ env hoặc printenv: hiển thị ra các biến môi trường (environment variables) trong hệ thống Linux/Unix
+
+=> echo $PATH: hiển thị nội dung biến PATH
+=> printenv PATH: hiển thị nội dung biến PATH
+
++ export VARIABLE_NAME=value: được sử dụng để xuất (export) biến môi trường, trong phiên làm việc hiện tại
+
++ Biến môi trường vĩnh viễn: Bạn có thể đặt biến môi trường để tồn tại vĩnh viễn bằng cách thêm nó vào file cấu hình như ~/.bashrc, ~/.bash_profile, hoặc /etc/profile.
+
+=> echo DB_USER=dochihung >> ~/.bashrc : lưu biến môi trường vào file ~/.bashrc, lưu ý không lưu biến nhạy cảm vào file này
+
+source  ~/.bashrc:  được sử dụng để thực thi nội dung của file ~/.bashrc trong shell hiện tại
+
+```
+
+
 
 
