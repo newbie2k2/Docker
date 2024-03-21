@@ -179,6 +179,30 @@ emacs là một trình soạn thảo văn bản mạnh mẽ với nhiều tính 
 => .....
 ```
 
+### Bài 2.11: Chaining commands (Chuỗi lệnh)
+
+```
+1. Dấu chấm phẩy (';'): để liên kết các lệnh và thực thi chúng theo thứ tự. Các lệnh sẽ được chạy tuần tự từ trái sang phải.
+=> comand1 ; command2 ; command3 
+
+2. Toán tử logic `&&` và `||`
++ &&: lệnh sau chỉ được thực thi nếu lệnh trước thành công (trả về exit code 0)
++ ||: lệnh sau chỉ được thực thi nếu lệnh trước thâ bại (trả về exit code khác 0)
+=> command1 && command2 || command3
+
+3. Toán tử | (pipe): cho phép bạn chuyển đầu ra của một lệnh thành đầu vào của lệnh khác.
+Điều này hữu ích khi bạn muốn kết hợp kết quả của hai lệnh lại với nhau
+=> command1 | command2
+
+4. Toán tử `>` và `>>`
+Toán tử `>` được sử dụng để chuyển hướng đầu ra của một lệnh sang một tập tin, trong khi `>>` được sử dụng để nối thêm đầu ra của lệnh vào cuối tệp tin
+
+=> example:
+ mkdir vip;\
+> cd vip;\
+> echo 'do chi hung'
+```
+
 
 
 
