@@ -222,6 +222,35 @@ source  ~/.bashrc:  được sử dụng để thực thi nội dung của file 
 
 ```
 
+### Bài 2.13: Quản lý processes
+Quản lý quy trình(processes) là một phần quan trọng trong việc quản lý hệ tống Linux/Unix.
+Dưới đây là một số lệnh thường được sử dụng để quản lý các quy trình
+
+```
+1. ps - Hiển thị danh sách các quy trình đang chạy
++ ps: Hiển thị danh sách các quy trình đang chạy trong shell hiện tại
++ ps aux: Hiển thị tất cả các quy trình trên hệ thống
++ ps aux | grep <process_name>: lọc danh sách quy trình bằng tên quy trình
+
+2. top - Hiển thị danh sách quy trình đang chạy và sử dụng tài nguyên
++ top: Hiển thị danh sách các quy trình đang chạy và sử dụng tài nguyên như CPU, bộ nhớ, ... Cập nhập thông tin một cách liên tục
+
+3. kill - Kết thúc một quy trình
++ kill <process_id>: Gửi tín hiệu kết thúc đến quy trình có ID là <process_id>
++ killall <process_name>: Kết thúc tất cả các quy trình có tên là <process_name>
+
+4. pgrep và pkill - Tìm kiếm và kết thúc quy trình dựa trên tên:
++ pgrep <process_name>: Tìm kiếm và hiển thị ID của các quy trình có tên là <process_name>.
++ pkill <process_name>: Kết thúc tất cả các quy trình có tên là <process_name>.
+
+5. killall - Kết thúc tất cả các quy trình dựa trên tên:
++ killall <process_name>: Kết thúc tất cả các quy trình có tên là <process_name>.
+
+6. htop - Một công cụ quản lý quy trình tương tác:
++ htop: Hiển thị danh sách các quy trình đang chạy dưới dạng biểu đồ tương tác, giúp dễ dàng quản lý và giám sát các quy trình.
+```
+Các lệnh trên là một số trong những công cụ cơ bản và phổ biến được sử dụng để quản lý các quy trình trong hệ thống Linux/Unix
+
 
 
 
