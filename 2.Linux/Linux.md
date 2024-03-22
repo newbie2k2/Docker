@@ -251,6 +251,51 @@ Dưới đây là một số lệnh thường được sử dụng để quản 
 ```
 Các lệnh trên là một số trong những công cụ cơ bản và phổ biến được sử dụng để quản lý các quy trình trong hệ thống Linux/Unix
 
+### Bài 2.14: Quản lý User
+Quản lý người dùng (user management) là một phần quan trọng trong việc quản lý hệ thống
+Linux/Unix. Dưới đây là một số lệnh và công cụ thường được sử dụng để quản lý người dùng
+
+```
+1. adduser hoặc useradd - Thêm người dùng mới
++ adduser <username>: Tạo một người dùng mới với tên là <username> và hướng dẫn người dùng nhập thông tin cần thiết.
++ useradd <username>: Tạo một người dùng mới với tên là <username> và sử dụng các cài đặt mặc định.
+
+2. passwd - Đặt mật khẩu cho người dùng
++ passwd <username>: Đặt mật khẩu cho người dùng có tên là <username>
+
+3. usermod - Sửa đổi thông tin người dùng
++ usermod -aG <group_name> <username>: Thêm người dùng vào một nhóm.
++ usermod -l <new_username> <old_username>: Đổi tên người dùng từ <old_username> thành <new_username>.
++ usermod -s <shell> <username>: Đặt shell mặc định cho người dùng.
+
+4. deluser hoặc userdel - Xóa người dùng
++ eluser <username>: Xóa người dùng và tất cả các dữ liệu liên quan đến họ.
++ userdel <username>: Xóa người dùng, nhưng không xóa các dữ liệu liên quan đến họ
+
+5. id - Hiển thị thông tin về người dùng
++ id <username>: Hiển thị thông tin về người dùng, bao gồm cả UID (User ID) và GID (Group ID).
 
 
+
+
+=> useradd -m {username}: Tạo mới 1 user và home directory
+
+=> cat /etc/passwd: xem chi tiết tất cả users and groups
+=> hung89hy:x:1000:1000::/home/john:/bin/sh
+=> :x => password is stored somewhere else
+=> :1000:1000 => user id:group id
+=> :/bin/sh => login shell for the user account
+
+=> usermod -s /bin/bash {username}: Đổi từ shell to bash for a user
+=> cat /etc/shadow: xem tất cả passwords của các users (only root account)
+
+=> docker exec -it -u {username} {container id} bash: execute command using user
+=> userdel {username}: xóa user
+=> adduser {username}: Tạo mới 1 user (nhưng phải nhập thông tin từng bước)
+
+
+
+```
+
+Quản lý người dùng là một phần quan trọng trong bảo quản và quản lý hệ thống Linux/Unix, đặc biệt khi bạn cần tạo, sửa đổi hoặc xoá người dùng, cũng như quản lý quyền tuy câp, an ninh
 
